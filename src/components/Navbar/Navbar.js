@@ -188,6 +188,58 @@ const Navbar = () => {
             >
               Get Free Estimate
             </Link>
+
+            {/* Mobile Contact Section */}
+            <div className="mobile-contact-section">
+              <h3>Contact Us</h3>
+              <div className="mobile-contact-items">
+                <a href="tel:+919959921803" className="mobile-contact-item">
+                  <div className="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M17.5 14.1667V16.6667C17.5 17.1269 17.1269 17.5 16.6667 17.5H3.33333C2.8731 17.5 2.5 17.1269 2.5 16.6667V14.1667M17.5 14.1667L10 8.33333L2.5 14.1667M17.5 14.1667V3.33333C17.5 2.8731 17.1269 2.5 16.6667 2.5H3.33333C2.8731 2.5 2.5 2.8731 2.5 3.33333V14.1667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="contact-info">
+                    <span className="contact-label">Phone</span>
+                    <span className="contact-value">+91 99599 21803</span>
+                  </div>
+                </a>
+                <a href="https://wa.me/919959921803" target="_blank" rel="noopener noreferrer" className="mobile-contact-item">
+                  <div className="contact-icon whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 1.66667C5.4 1.66667 1.66667 5.4 1.66667 10C1.66667 13.35 3.725 16.1417 6.66667 17.3917C6.65833 16.8083 6.725 15.65 6.80833 15.05L7.5 11.6667H5.83333C5.83333 11.6667 5.83333 10.5 5.83333 9.58333C5.83333 8.25 6.75 7.08333 7.91667 7.08333C8.83333 7.08333 9.25 7.66667 9.25 8.5C9.25 9.41667 8.75 10.75 8.41667 11.8333C8.16667 12.6667 8.83333 13.3333 9.66667 13.3333C11.1667 13.3333 12.1667 11.8333 12.1667 9.75C12.1667 7.91667 10.9167 6.66667 9.08333 6.66667C6.83333 6.66667 5.41667 8.33333 5.41667 9.75C5.41667 10.5 5.75 11.25 6.25 11.5833C6.33333 11.6667 6.35 11.7 6.36667 11.75C6.38333 11.8 6.4 11.8833 6.36667 11.95C6.33333 12.05 6.25 12.3333 6.2 12.5C6.13333 12.75 5.95 12.8333 5.75 12.75C4.75 12.3333 4.16667 10.9167 4.16667 9.58333C4.16667 7.08333 6.25 4.58333 9.41667 4.58333C12.0833 4.58333 14.1667 6.41667 14.1667 9.58333C14.1667 12.5833 12.0833 14.9167 9.25 14.9167C8.25 14.9167 7.33333 14.5 7 14C6.66667 13.5 6.83333 13.0833 7.08333 12.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="contact-info">
+                    <span className="contact-label">WhatsApp</span>
+                    <span className="contact-value">Chat with us</span>
+                  </div>
+                </a>
+                <a href="mailto:hello@trendyhomeinterio.com" className="mobile-contact-item">
+                  <div className="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M2.5 6.66667L10 11.6667L17.5 6.66667M2.5 6.66667V15.8333H17.5V6.66667M2.5 6.66667H17.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="contact-info">
+                    <span className="contact-label">Email</span>
+                    <span className="contact-value">hello@trendyhomeinterio.com</span>
+                  </div>
+                </a>
+                <div className="mobile-contact-item location-item">
+                  <div className="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 10.8333C11.3807 10.8333 12.5 9.71404 12.5 8.33333C12.5 6.95262 11.3807 5.83333 10 5.83333C8.61929 5.83333 7.5 6.95262 7.5 8.33333C7.5 9.71404 8.61929 10.8333 10 10.8333Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M10 1.66667C7.23858 1.66667 5 3.90524 5 6.66667C5 10.8333 10 18.3333 10 18.3333C10 18.3333 15 10.8333 15 6.66667C15 3.90524 12.7614 1.66667 10 1.66667Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="contact-info">
+                    <span className="contact-label">We Serve</span>
+                    <span className="contact-value">Andhra Pradesh & Telangana</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <button 
