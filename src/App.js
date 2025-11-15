@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import Home from './pages/Home/Home';
 import Services from './pages/Services/Services';
 import DesignIdeas from './pages/DesignIdeas/DesignIdeas';
@@ -58,6 +59,7 @@ function App() {
           <Route path="/design-journal" element={<Home />} />
           <Route path="/design-library" element={<Home />} />
         </Routes>
+        <WhatsAppButton />
         <Footer />
       </div>
     </Router>

@@ -76,6 +76,14 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       padding: 3rem 1rem;
     }
 
+    @media (max-width: 768px) {
+      min-height: 120vh !important;
+      height: 120vh !important;
+      margin-top: 0 !important;
+      padding: 0 !important;
+      overflow: hidden !important;
+    }
+
     .hero-video-background {
       position: absolute;
       top: 50%;
@@ -87,6 +95,17 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       height: auto;
       z-index: 0;
       object-fit: cover;
+
+      @media (max-width: 768px) {
+        width: 100% !important;
+        height: 120vh !important;
+        min-height: 120vh !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        object-fit: cover !important;
+        object-position: center !important;
+      }
     }
 
     .hero-container {
@@ -108,12 +127,20 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
         grid-template-columns: 1fr;
         gap: 2rem;
       }
+
+      @media (max-width: 768px) {
+        display: none !important;
+      }
     }
 
     .hero-content {
       color: #ffffff;
       position: relative;
       z-index: 3;
+
+      @media (max-width: 768px) {
+        display: none !important;
+      }
 
       .hero-badge-card {
         display: inline-flex;
@@ -318,6 +345,10 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       @media (max-width: 968px) {
         padding: 2rem;
         border-radius: 24px;
+      }
+
+      @media (max-width: 768px) {
+        display: none !important;
       }
 
       .form-card-header {
