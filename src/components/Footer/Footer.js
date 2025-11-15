@@ -5,12 +5,20 @@ import './Footer.scss';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
+  const [openDropdowns, setOpenDropdowns] = useState({});
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     console.log('Newsletter subscription:', email);
     alert('Thank you for subscribing to our newsletter!');
     setEmail('');
+  };
+
+  const toggleDropdown = (columnName) => {
+    setOpenDropdowns(prev => ({
+      ...prev,
+      [columnName]: !prev[columnName]
+    }));
   };
 
   return (
@@ -98,8 +106,22 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
+            <h3 
+              className="footer-column-header"
+              onClick={() => toggleDropdown('quickLinks')}
+            >
+              Quick Links
+              <svg 
+                className={`dropdown-icon ${openDropdowns.quickLinks ? 'open' : ''}`}
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none"
+              >
+                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </h3>
+            <ul className={`footer-menu ${openDropdowns.quickLinks ? 'open' : ''}`}>
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/estimate">Get Estimate</Link></li>
@@ -108,8 +130,22 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h3>Services</h3>
-            <ul>
+            <h3 
+              className="footer-column-header"
+              onClick={() => toggleDropdown('services')}
+            >
+              Services
+              <svg 
+                className={`dropdown-icon ${openDropdowns.services ? 'open' : ''}`}
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none"
+              >
+                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </h3>
+            <ul className={`footer-menu ${openDropdowns.services ? 'open' : ''}`}>
               <li><Link to="/modular-kitchen">Modular Kitchen</Link></li>
               <li><Link to="/wardrobe">Wardrobe</Link></li>
               <li><Link to="/bedroom">Bedroom</Link></li>
@@ -120,8 +156,22 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h3>Support</h3>
-            <ul>
+            <h3 
+              className="footer-column-header"
+              onClick={() => toggleDropdown('support')}
+            >
+              Support
+              <svg 
+                className={`dropdown-icon ${openDropdowns.support ? 'open' : ''}`}
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none"
+              >
+                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </h3>
+            <ul className={`footer-menu ${openDropdowns.support ? 'open' : ''}`}>
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/terms">Terms of Use</Link></li>
               <li><Link to="/faq">FAQs</Link></li>
@@ -131,8 +181,22 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h3>Locations We Serve</h3>
-            <ul>
+            <h3 
+              className="footer-column-header"
+              onClick={() => toggleDropdown('locations')}
+            >
+              Locations We Serve
+              <svg 
+                className={`dropdown-icon ${openDropdowns.locations ? 'open' : ''}`}
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none"
+              >
+                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </h3>
+            <ul className={`footer-menu ${openDropdowns.locations ? 'open' : ''}`}>
               <li>Andhra Pradesh (AP)</li>
               <li>Telangana (TG)</li>
             </ul>

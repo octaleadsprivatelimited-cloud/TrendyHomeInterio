@@ -37,7 +37,11 @@ $border: #d2d2d7;
     border-bottom: 1px solid $border;
 
     @media (max-width: 768px) {
-      padding: 2rem 0;
+      padding: 1.5rem 0;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1rem 0;
     }
 
     .newsletter-section {
@@ -50,7 +54,11 @@ $border: #d2d2d7;
       @media (max-width: 768px) {
         flex-direction: column;
         align-items: stretch;
-        gap: 1.5rem;
+        gap: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        gap: 0.75rem;
       }
 
       .newsletter-content {
@@ -63,6 +71,16 @@ $border: #d2d2d7;
           color: $text-dark;
           margin: 0 0 0.5rem 0;
           letter-spacing: -0.022em;
+
+          @media (max-width: 768px) {
+            font-size: 1.25rem;
+            margin: 0 0 0.375rem 0;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 1.125rem;
+            margin: 0 0 0.25rem 0;
+          }
         }
 
         p {
@@ -71,6 +89,15 @@ $border: #d2d2d7;
           margin: 0;
           line-height: 1.47059;
           letter-spacing: -0.01em;
+
+          @media (max-width: 768px) {
+            font-size: 0.875rem;
+            line-height: 1.4;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 0.8125rem;
+          }
         }
       }
 
@@ -97,6 +124,18 @@ $border: #d2d2d7;
           font-family: inherit;
           transition: all 0.2s ease;
           letter-spacing: -0.01em;
+
+          @media (max-width: 768px) {
+            padding: 0.625rem 0.875rem;
+            font-size: 0.875rem;
+            border-radius: 10px;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8125rem;
+            border-radius: 8px;
+          }
 
           &::placeholder {
             color: $text-lighter;
@@ -128,6 +167,14 @@ $border: #d2d2d7;
           @media (max-width: 768px) {
             width: 100%;
             justify-content: center;
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.5rem 1rem;
+            font-size: 0.8125rem;
+            gap: 0.375rem;
           }
 
           &:hover {
@@ -162,25 +209,70 @@ $border: #d2d2d7;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      padding: 2.5rem 0;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
     }
 
     @media (max-width: 576px) {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.25rem;
+      padding: 1.25rem 0;
+    }
+
+    @media (max-width: 480px) {
+      gap: 1rem;
+      padding: 1rem 0;
     }
 
     .footer-column {
       &.company-column {
+        h3 {
+          pointer-events: auto !important;
+          cursor: default !important;
+
+          @media (max-width: 768px) {
+            cursor: default !important;
+          }
+
+          .dropdown-icon {
+            display: none !important;
+          }
+        }
+
+        .footer-menu {
+          @media (max-width: 768px) {
+            max-height: none !important;
+            opacity: 1 !important;
+            padding: 0 !important;
+          }
+        }
+
         .footer-logo {
           margin-bottom: 1.5rem;
+
+          @media (max-width: 768px) {
+            margin-bottom: 1rem;
+          }
+
+          @media (max-width: 480px) {
+            margin-bottom: 0.75rem;
+          }
 
           .footer-logo-image {
             height: 70px;
             width: auto;
             object-fit: contain;
             margin-bottom: 0.5rem;
+
+            @media (max-width: 768px) {
+              height: 50px;
+              margin-bottom: 0.375rem;
+            }
+
+            @media (max-width: 480px) {
+              height: 40px;
+              margin-bottom: 0.25rem;
+            }
           }
 
           h3 {
@@ -197,6 +289,14 @@ $border: #d2d2d7;
             margin: 0;
             line-height: 1.47059;
             letter-spacing: -0.01em;
+
+            @media (max-width: 768px) {
+              font-size: 0.875rem;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 0.8125rem;
+            }
           }
         }
 
@@ -206,10 +306,28 @@ $border: #d2d2d7;
           gap: 0.875rem;
           margin-bottom: 1.75rem;
 
+          @media (max-width: 768px) {
+            gap: 0.625rem;
+            margin-bottom: 1.25rem;
+          }
+
+          @media (max-width: 480px) {
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+          }
+
           .contact-item {
             display: flex;
             align-items: center;
             gap: 0.75rem;
+
+            @media (max-width: 768px) {
+              gap: 0.625rem;
+            }
+
+            @media (max-width: 480px) {
+              gap: 0.5rem;
+            }
 
             .contact-icon {
               width: 32px;
@@ -223,9 +341,30 @@ $border: #d2d2d7;
               flex-shrink: 0;
               transition: all 0.2s ease;
 
+              @media (max-width: 768px) {
+                width: 28px;
+                height: 28px;
+                border-radius: 6px;
+              }
+
+              @media (max-width: 480px) {
+                width: 24px;
+                height: 24px;
+              }
+
               svg {
                 width: 16px;
                 height: 16px;
+
+                @media (max-width: 768px) {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                @media (max-width: 480px) {
+                  width: 12px;
+                  height: 12px;
+                }
               }
             }
 
@@ -235,6 +374,14 @@ $border: #d2d2d7;
               font-size: 0.9375rem;
               transition: color 0.2s ease;
               letter-spacing: -0.01em;
+
+              @media (max-width: 768px) {
+                font-size: 0.875rem;
+              }
+
+              @media (max-width: 480px) {
+                font-size: 0.8125rem;
+              }
 
               &:hover {
                 color: $primary;
@@ -258,6 +405,14 @@ $border: #d2d2d7;
           gap: 0.625rem;
           flex-wrap: wrap;
 
+          @media (max-width: 768px) {
+            gap: 0.5rem;
+          }
+
+          @media (max-width: 480px) {
+            gap: 0.375rem;
+          }
+
           .social-link {
             width: 38px;
             height: 38px;
@@ -271,9 +426,30 @@ $border: #d2d2d7;
             text-decoration: none;
             transition: all 0.2s ease;
 
+            @media (max-width: 768px) {
+              width: 32px;
+              height: 32px;
+              border-radius: 6px;
+            }
+
+            @media (max-width: 480px) {
+              width: 28px;
+              height: 28px;
+            }
+
             svg {
               width: 16px;
               height: 16px;
+
+              @media (max-width: 768px) {
+                width: 14px;
+                height: 14px;
+              }
+
+              @media (max-width: 480px) {
+                width: 12px;
+                height: 12px;
+              }
             }
 
             &:hover {
@@ -292,6 +468,58 @@ $border: #d2d2d7;
         color: $text-dark;
         text-transform: none;
         letter-spacing: -0.01em;
+
+        @media (max-width: 768px) {
+          font-size: 0.875rem;
+          margin: 0 0 0.875rem 0;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.8125rem;
+          margin: 0 0 0.625rem 0;
+        }
+
+        &.footer-column-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          user-select: none;
+          position: relative;
+
+          @media (min-width: 769px) {
+            cursor: default;
+            pointer-events: none;
+          }
+
+          .dropdown-icon {
+            display: none;
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+            color: $text-light;
+            flex-shrink: 0;
+            margin-left: 0.5rem;
+
+            @media (max-width: 768px) {
+              display: block;
+            }
+
+            &.open {
+              transform: rotate(180deg);
+            }
+          }
+
+          @media (max-width: 768px) {
+            margin: 0;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid $border;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.625rem 0;
+          }
+        }
       }
 
       ul {
@@ -302,11 +530,28 @@ $border: #d2d2d7;
         flex-direction: column;
         gap: 0.625rem;
 
+        @media (max-width: 768px) {
+          gap: 0.5rem;
+        }
+
+        @media (max-width: 480px) {
+          gap: 0.375rem;
+        }
+
         li {
           color: $text-light;
           font-size: 0.875rem;
           line-height: 1.47059;
           letter-spacing: -0.01em;
+
+          @media (max-width: 768px) {
+            font-size: 0.8125rem;
+            line-height: 1.4;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 0.75rem;
+          }
 
           a {
             color: $text-light;
@@ -317,9 +562,40 @@ $border: #d2d2d7;
             line-height: 1.47059;
             letter-spacing: -0.01em;
 
+            @media (max-width: 768px) {
+              font-size: 0.8125rem;
+              line-height: 1.4;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 0.75rem;
+            }
+
             &:hover {
               color: $primary;
             }
+          }
+        }
+      }
+
+      .footer-menu {
+        @media (max-width: 768px) {
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+          padding: 0;
+
+          &.open {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 0.75rem 0 0 0;
+          }
+        }
+
+        @media (max-width: 480px) {
+          &.open {
+            padding: 0.625rem 0 0 0;
           }
         }
       }
