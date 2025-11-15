@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,7 +19,37 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      // Close mobile dropdown when menu closes
+      setMobileDropdown(null);
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    // Close mobile menu and dropdown when route changes
+    setIsMobileMenuOpen(false);
+    setMobileDropdown(null);
+  }, [location.pathname]);
+
   const isActive = (path) => location.pathname === path;
+
+  const toggleMobileDropdown = (dropdown) => {
+    setMobileDropdown(mobileDropdown === dropdown ? null : dropdown);
+  };
 
   return (
     <>
@@ -75,42 +106,70 @@ const Navbar = () => {
             </Link>
 
             <div 
-              className={`navbar-item dropdown ${activeDropdown === 'services' ? 'active' : ''}`}
-              onMouseEnter={() => setActiveDropdown('services')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className={`navbar-item dropdown ${activeDropdown === 'services' ? 'active' : ''} ${mobileDropdown === 'services' ? 'mobile-open' : ''}`}
+              onMouseEnter={() => !window.matchMedia('(max-width: 968px)').matches && setActiveDropdown('services')}
+              onMouseLeave={() => !window.matchMedia('(max-width: 968px)').matches && setActiveDropdown(null)}
             >
-              <span className="navbar-link">
+              <span 
+                className="navbar-link"
+                onClick={() => window.matchMedia('(max-width: 968px)').matches && toggleMobileDropdown('services')}
+              >
                 Services
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: '4px', display: 'inline-block'}}>
+                <svg 
+                  width="12" 
+                  height="12" 
+                  viewBox="0 0 12 12" 
+                  fill="none" 
+                  style={{
+                    marginLeft: '4px', 
+                    display: 'inline-block',
+                    transform: (activeDropdown === 'services' || mobileDropdown === 'services') ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }}
+                >
                   <path d="M6 9L1 4H11L6 9Z" fill="currentColor"/>
                 </svg>
               </span>
-              <div className={`dropdown-menu ${activeDropdown === 'services' ? 'visible' : ''}`}>
-                <Link to="/modular-kitchen" onClick={() => setIsMobileMenuOpen(false)}>Modular Kitchen</Link>
-                <Link to="/wardrobe" onClick={() => setIsMobileMenuOpen(false)}>Wardrobe</Link>
-                <Link to="/bedroom" onClick={() => setIsMobileMenuOpen(false)}>Bedroom</Link>
-                <Link to="/living-room" onClick={() => setIsMobileMenuOpen(false)}>Living Room</Link>
-                <Link to="/bathroom" onClick={() => setIsMobileMenuOpen(false)}>Bathroom</Link>
+              <div className={`dropdown-menu ${activeDropdown === 'services' || mobileDropdown === 'services' ? 'visible' : ''}`}>
+                <Link to="/modular-kitchen" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Modular Kitchen</Link>
+                <Link to="/wardrobe" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Wardrobe</Link>
+                <Link to="/bedroom" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Bedroom</Link>
+                <Link to="/living-room" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Living Room</Link>
+                <Link to="/bathroom" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Bathroom</Link>
               </div>
             </div>
 
             <div 
-              className={`navbar-item dropdown ${activeDropdown === 'more' ? 'active' : ''}`}
-              onMouseEnter={() => setActiveDropdown('more')}
-              onMouseLeave={() => setActiveDropdown(null)}
+              className={`navbar-item dropdown ${activeDropdown === 'more' ? 'active' : ''} ${mobileDropdown === 'more' ? 'mobile-open' : ''}`}
+              onMouseEnter={() => !window.matchMedia('(max-width: 968px)').matches && setActiveDropdown('more')}
+              onMouseLeave={() => !window.matchMedia('(max-width: 968px)').matches && setActiveDropdown(null)}
             >
-              <span className="navbar-link">
+              <span 
+                className="navbar-link"
+                onClick={() => window.matchMedia('(max-width: 968px)').matches && toggleMobileDropdown('more')}
+              >
                 More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginLeft: '4px', display: 'inline-block'}}>
+                <svg 
+                  width="12" 
+                  height="12" 
+                  viewBox="0 0 12 12" 
+                  fill="none" 
+                  style={{
+                    marginLeft: '4px', 
+                    display: 'inline-block',
+                    transform: (activeDropdown === 'more' || mobileDropdown === 'more') ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }}
+                >
                   <path d="M6 9L1 4H11L6 9Z" fill="currentColor"/>
                 </svg>
               </span>
-              <div className={`dropdown-menu ${activeDropdown === 'more' ? 'visible' : ''}`}>
-                <Link to="/space-saving-furniture" onClick={() => setIsMobileMenuOpen(false)}>Space Saving Furniture</Link>
-                <Link to="/home-office" onClick={() => setIsMobileMenuOpen(false)}>Home Office</Link>
-                <Link to="/design-gallery" onClick={() => setIsMobileMenuOpen(false)}>Design Gallery</Link>
-                <Link to="/customer-stories" onClick={() => setIsMobileMenuOpen(false)}>Customer Stories</Link>
-                <Link to="/business-interiors" onClick={() => setIsMobileMenuOpen(false)}>Business Interiors</Link>
+              <div className={`dropdown-menu ${activeDropdown === 'more' || mobileDropdown === 'more' ? 'visible' : ''}`}>
+                <Link to="/space-saving-furniture" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Space Saving Furniture</Link>
+                <Link to="/home-office" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Home Office</Link>
+                <Link to="/design-gallery" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Design Gallery</Link>
+                <Link to="/customer-stories" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Customer Stories</Link>
+                <Link to="/business-interiors" onClick={() => { setIsMobileMenuOpen(false); setMobileDropdown(null); }}>Business Interiors</Link>
               </div>
             </div>
 

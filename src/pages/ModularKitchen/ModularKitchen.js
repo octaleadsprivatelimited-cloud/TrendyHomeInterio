@@ -95,7 +95,7 @@ const ModularKitchen = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="service-gallery" style={{ backgroundImage: `url(${modularKitchen2})` }}>
+      <section className="service-gallery">
         <div className="section-background-overlay"></div>
         <div className="container">
           <div className="section-header">
