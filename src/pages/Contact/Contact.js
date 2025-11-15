@@ -58,6 +58,27 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      {/* Hero Section */}
+      <section className="contact-hero-section">
+        <video 
+          className="contact-hero-video-background"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source src="/hero-section-contact.mp4" type="video/mp4" />
+          <source src="/home-video.mp4" type="video/mp4" />
+        </video>
+        <div className="contact-hero-container">
+          <div className="contact-hero-content">
+            <h1 className="contact-hero-title">Get In Touch</h1>
+            <p className="contact-hero-subtitle">We'd love to hear from you and help transform your space</p>
+          </div>
+        </div>
+      </section>
+
       {/* Top Contact Cards */}
       <section className="top-contact-cards">
         <div className="container">
