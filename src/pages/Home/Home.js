@@ -148,46 +148,46 @@ const Home = () => {
   const processJourney = [
     {
       phase: '01',
-      title: 'Discovery Lab',
-      summary: 'Ethnography sprints turn routines, tastes, and budgets into a crisp UX-style brief.',
+      title: 'Design Consultation',
+      summary: 'We understand your lifestyle, preferences, and vision to create a personalized interior design brief that reflects your unique style.',
       duration: 'Week 1-2',
-      owner: 'Lead Strategist',
-      experience: 'In-studio + virtual',
-      rituals: ['Lifestyle audit', 'Mood film workshop', 'Budget mapping']
+      owner: 'Interior Design Consultant',
+      experience: 'At home + virtual',
+      rituals: ['Space analysis', 'Style consultation', 'Budget planning']
     },
     {
       phase: '02',
-      title: 'Co-Creation Cloud',
-      summary: 'Digital twins, VR previews, and tactile kits keep every decision fast and visual.',
+      title: 'Design Development',
+      summary: 'Detailed 3D visualizations, material samples, and layout plans help you visualize your dream space before we begin.',
       duration: 'Week 3-5',
-      owner: 'Design Director',
-      experience: 'Hybrid reviews',
-      rituals: ['Weekly digital twin', 'Sample tasting', 'Async approvals']
+      owner: 'Lead Interior Designer',
+      experience: 'Design reviews',
+      rituals: ['3D renderings', 'Material selection', 'Layout approvals']
     },
     {
       phase: '03',
-      title: 'Build Pods & QA',
-      summary: 'Specialist pods build, ship, and install with daily QA snapshots and dashboards.',
-      duration: 'Week 6-9',
-      owner: 'Pod PM + QA lead',
-      experience: 'On-site rituals',
-      rituals: ['Pod stand-ups', 'QC scorecards', 'Client site walks']
+      title: 'Execution & Installation',
+      summary: 'Our expert craftsmen bring your design to life with meticulous attention to detail and regular quality checks.',
+      duration: 'Week 6-10',
+      owner: 'Project Manager',
+      experience: 'On-site coordination',
+      rituals: ['Progress updates', 'Quality inspections', 'Site visits']
     },
     {
       phase: '04',
-      title: 'Concierge Launch',
-      summary: 'Styled reveal, warranty onboarding, and proactive care keep the space “day one”.',
-      duration: 'Week 10+',
-      owner: 'Concierge team',
-      experience: 'White-glove handover',
-      rituals: ['Styled reveal', 'Warranty vault', 'Annual health checks']
+      title: 'Final Handover',
+      summary: 'Stunning reveal, complete documentation, and ongoing support ensure your space remains beautiful for years to come.',
+      duration: 'Week 11+',
+      owner: 'Handover Team',
+      experience: 'Final walkthrough',
+      rituals: ['Space styling', 'Warranty documentation', 'After-care support']
     }
   ];
 
   const processMetrics = [
-    { value: '92%', label: 'design approvals happen on the first review' },
-    { value: '48 hrs', label: 'average turn-around for change requests' },
-    { value: '4.9/5', label: 'handover happiness across the last 120 builds' }
+    { value: '95%', label: 'clients approve designs in the first presentation' },
+    { value: '24 hrs', label: 'average response time for design revisions' },
+    { value: '4.9/5', label: 'customer satisfaction rating across all projects' }
   ];
 
   const whyCards = [
@@ -598,8 +598,8 @@ const Home = () => {
         <div className="container">
           <div className="section-heading center compact">
             <p className="section-eyebrow">Our Process</p>
-            <h2>UI/UX cards that make every phase feel effortless</h2>
-            <p>Four crisp rituals, one team of owners, zero guesswork.</p>
+            <h2>Transform your vision into reality with our proven design process</h2>
+            <p>Four seamless phases, one dedicated team, zero compromises on quality.</p>
           </div>
 
           <div className="process-card-grid">
@@ -632,9 +632,9 @@ const Home = () => {
               </div>
             ))}
             <div className="process-cta-card">
-              <p>Need to see the backstage dashboard?</p>
-              <small>We’ll share a sample sprint board and RCA log during the consult.</small>
-              <Link to="/services" className="btn-outline-sm">View detailed playbook</Link>
+              <p>Ready to start your interior design journey?</p>
+              <small>Book a free consultation and get a customized design plan for your space.</small>
+              <Link to="/contact" className="btn-outline-sm">Book Free Consultation</Link>
             </div>
           </div>
         </div>
