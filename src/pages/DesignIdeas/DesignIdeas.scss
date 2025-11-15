@@ -1,0 +1,262 @@
+.design-ideas {
+  min-height: 100vh;
+  padding-top: 68px;
+
+  .ideas-hero {
+    position: relative;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(197, 118, 63, 0.05) 0%, rgba(135, 169, 107, 0.05) 100%);
+    color: #2c3e50;
+    text-align: center;
+    overflow: hidden;
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+
+      .hero-label {
+        display: inline-block;
+        padding: 0.375rem 1rem;
+        background: rgba(197, 118, 63, 0.1);
+        color: #ff6b35;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        color: #2c3e50;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .ideas-content {
+    padding: 2.5rem 2rem;
+    background: #f8f9fa;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .category-filter {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .filter-btn {
+          padding: 0.625rem 1.5rem;
+          background: white;
+          color: #2c3e50;
+          border: 2px solid #e0e0e0;
+          border-radius: 50px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: #ff6b35;
+            color: #ff6b35;
+            transform: translateY(-2px);
+          }
+
+          &.active {
+            background: #ff6b35;
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 5px 20px rgba(197, 118, 63, 0.3);
+          }
+        }
+      }
+
+      .ideas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        .idea-card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+          transition: all 0.3s ease;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+
+            .idea-overlay {
+              opacity: 1;
+            }
+
+            .idea-image {
+              transform: scale(1.05);
+            }
+          }
+
+            .idea-image {
+              position: relative;
+              height: 300px;
+              overflow: hidden;
+              background: linear-gradient(135deg, rgba(197, 118, 63, 0.1) 0%, rgba(135, 169, 107, 0.1) 100%);
+              transition: transform 0.3s ease;
+
+              .image-placeholder {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, rgba(197, 118, 63, 0.15) 0%, rgba(135, 169, 107, 0.15) 100%);
+
+              .placeholder-content {
+                text-align: center;
+
+                .placeholder-icon {
+                  font-size: 4rem;
+                  opacity: 0.7;
+                }
+              }
+            }
+
+            .idea-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.6);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              opacity: 0;
+              transition: opacity 0.3s ease;
+
+              .view-btn {
+                padding: 1rem 2rem;
+                background: white;
+                color: #ff6b35;
+                border: none;
+                border-radius: 50px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+                }
+              }
+            }
+          }
+
+          .idea-info {
+            padding: 2rem;
+
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: #2c3e50;
+              margin-bottom: 0.5rem;
+            }
+
+            p {
+              color: #666;
+              line-height: 1.6;
+              font-size: 0.95rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .inspiration-section {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    text-align: center;
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .inspiration-content {
+        h2 {
+          font-size: clamp(2rem, 5vw, 3rem);
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          opacity: 0.9;
+          margin-bottom: 2rem;
+          line-height: 1.8;
+        }
+
+        .cta-button {
+          padding: 1.2rem 3rem;
+          background: #ff6b35;
+          color: white;
+          border: none;
+          border-radius: 50px;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 30px rgba(197, 118, 63, 0.3);
+
+          &:hover {
+            background: darken(#ff6b35, 5%);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(197, 118, 63, 0.4);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .design-ideas {
+    .ideas-hero {
+      padding: 4rem 1rem;
+    }
+
+    .ideas-content {
+      padding: 3rem 1rem;
+
+      .container .ideas-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .inspiration-section {
+      padding: 4rem 1rem;
+    }
+  }
+}

@@ -1,0 +1,482 @@
+// Modern Elegant Design System - Light Orange & Olive Green
+$primary: #ff8c42; // Light Orange
+$primary-hover: #ff7a2e;
+$primary-light: #ffb366;
+$secondary: #9db17c; // Light Olive Green
+$secondary-hover: #8ba06a;
+$secondary-light: #b5c89a;
+$text-dark: #1d1d1f;
+$text-light: #6e6e73;
+$text-lighter: #86868b;
+$bg-white: #ffffff;
+$bg-light: #fafafa;
+$bg-gray: #f5f5f7;
+$border: #e5e5e7;
+$border-light: #f0f0f0;
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
+$gradient-primary: linear-gradient(135deg, #ff8c42 0%, #ffb366 100%);
+$gradient-secondary: linear-gradient(135deg, #9db17c 0%, #b5c89a 100%);
+$gradient-mixed: linear-gradient(135deg, #ff8c42 0%, #9db17c 100%);
+
+.contact-page {
+  min-height: 100vh;
+  padding-top: 76px;
+  background-color: $bg-light;
+
+  @media (max-width: 968px) {
+    padding-top: 44px;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: 768px) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  // Top Contact Cards Section
+  .top-contact-cards {
+    padding: 2.5rem 0;
+    background-color: $bg-white;
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
+
+      .top-card {
+        background: linear-gradient(135deg, $bg-white 0%, $bg-light 100%);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: $shadow-sm;
+        border: 1px solid $border-light;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: $gradient-primary;
+          transform: scaleX(0);
+          transition: transform 0.4s ease;
+        }
+
+        &:hover {
+          box-shadow: $shadow-md;
+          transform: translateY(-4px);
+          border-color: rgba(255, 140, 66, 0.2);
+
+          &::before {
+            transform: scaleX(1);
+          }
+
+          .card-icon {
+            background: rgba(255, 140, 66, 0.15);
+            transform: scale(1.1);
+          }
+        }
+
+        .card-icon {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 140, 66, 0.08);
+          border-radius: 12px;
+          color: $primary;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(255, 140, 66, 0.1);
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .card-content {
+          flex: 1;
+
+          h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: $text-dark;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.01em;
+          }
+
+          p {
+            font-size: 0.8125rem;
+            color: $text-light;
+            margin: 0;
+            line-height: 1.5;
+          }
+
+          .card-link {
+            color: $primary;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: block;
+            margin-top: 0.25rem;
+
+            &:hover {
+              color: $primary-hover;
+            }
+          }
+
+          .phone-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+
+            .card-link {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Main Content Section
+  .contact-main-content {
+    padding: 3rem 0;
+    background: $bg-light;
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .section-title {
+        font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+        font-weight: 700;
+        color: $text-dark;
+        margin: 0 0 0.75rem 0;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 3px;
+          background: $gradient-primary;
+          border-radius: 2px;
+        }
+      }
+
+      .section-description {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        color: $text-light;
+        line-height: 1.5;
+        margin: 1rem auto 0;
+        max-width: 700px;
+      }
+    }
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+
+      @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    // Form Column
+    .form-column {
+      .form-card {
+        background: linear-gradient(135deg, $bg-white 0%, $bg-light 100%);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: $shadow-md;
+        border: 1px solid $border-light;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: $gradient-primary;
+        }
+
+        @media (max-width: 768px) {
+          padding: 2rem 1.5rem;
+        }
+
+        .form-card-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $text-dark;
+          margin: 0 0 1.5rem 0;
+          letter-spacing: -0.022em;
+        }
+
+        .contact-form {
+          .form-group {
+            margin-bottom: 1.25rem;
+
+            label {
+              display: block;
+              font-size: 0.875rem;
+              font-weight: 600;
+              color: $text-dark;
+              margin-bottom: 0.5rem;
+            }
+
+            input,
+            textarea,
+            select {
+              width: 100%;
+              padding: 0.75rem 0.875rem;
+              border: 1px solid $border;
+              border-radius: 10px;
+              font-size: 0.875rem;
+              font-family: inherit;
+              transition: all 0.2s ease;
+              background: $bg-white;
+              color: $text-dark;
+              letter-spacing: -0.01em;
+
+              &::placeholder {
+                color: $text-lighter;
+              }
+
+              &:focus {
+                outline: none;
+                border-color: $primary;
+                box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.1);
+              }
+            }
+
+            textarea {
+              resize: vertical;
+              min-height: 120px;
+              font-family: inherit;
+            }
+
+            select {
+              cursor: pointer;
+              appearance: none;
+              background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+              background-repeat: no-repeat;
+              background-position: right 1rem center;
+              padding-right: 2.5rem;
+
+              option {
+                background: $bg-white;
+                color: $text-dark;
+              }
+            }
+          }
+
+          .submit-button {
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+            background: $gradient-primary;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.01em;
+            box-shadow: 0 4px 16px rgba(255, 140, 66, 0.3);
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+              transition: left 0.5s ease;
+            }
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(255, 140, 66, 0.4);
+
+              &::before {
+                left: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Info Column
+    .info-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .office-card,
+      .map-card {
+        background: linear-gradient(135deg, $bg-white 0%, $bg-light 100%);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: $shadow-md;
+        border: 1px solid $border-light;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: $gradient-primary;
+        }
+
+        @media (max-width: 768px) {
+          padding: 2rem 1.5rem;
+        }
+
+        .card-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $text-dark;
+          margin: 0 0 1.5rem 0;
+          letter-spacing: -0.022em;
+        }
+      }
+
+      .office-card {
+        .office-info {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+
+          .info-item {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+
+            .info-icon {
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: rgba(255, 140, 66, 0.08);
+              border-radius: 10px;
+              color: $primary;
+              flex-shrink: 0;
+
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            .info-content {
+              flex: 1;
+
+              p {
+                font-size: 0.9375rem;
+                color: $text-dark;
+                margin: 0 0 0.75rem 0;
+                line-height: 1.6;
+              }
+
+              .map-link,
+              .info-link {
+                color: $primary;
+                text-decoration: none;
+                font-size: 0.8125rem;
+                transition: color 0.2s ease;
+                display: block;
+                margin-top: 0.25rem;
+
+                &:hover {
+                  color: $primary-hover;
+                }
+              }
+
+              .info-link {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .map-card {
+        .map-container {
+          margin-bottom: 1.5rem;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: $shadow-sm;
+
+          iframe {
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .map-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.875rem 1.5rem;
+          background: rgba(255, 140, 66, 0.08);
+          color: $primary;
+          border: 1px solid rgba(255, 140, 66, 0.2);
+          border-radius: 50px;
+          text-decoration: none;
+          font-size: 0.9375rem;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: $primary;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
