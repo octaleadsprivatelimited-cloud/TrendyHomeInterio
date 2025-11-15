@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import heroBackground from '../../assets/images/hero-background.jpeg';
 import kitchenImage from '../../assets/images/modular-kitchen-1.jpeg';
 import livingRoomImage from '../../assets/images/living-room-1.jpeg';
 import wardrobeImage from '../../assets/images/wardrobe-1.jpeg';
@@ -292,35 +291,52 @@ const Home = () => {
       <div className="page-background-overlay"></div>
       {/* Hero Section - Modern Card-Based Design */}
       <section className="hero-section">
+        <video 
+          className="hero-video-background"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/home-video.mp4" type="video/mp4" />
+        </video>
         <div className="hero-container">
           <div className="hero-content">
-            <div className="hero-badge-card">
-              <span className="badge-dot"></span>
-              <span>Trusted by 50,000+ Happy Customers</span>
-            </div>
-            
             <h1 className="hero-title">
-              Interiors you'll <span className="highlight">love.</span>
+              <span className="title-line">Transform Your Space</span>
+              <span className="title-line highlight">Into Art</span>
             </h1>
-            <p className="hero-subtitle">Without the stress!</p>
+            <p className="hero-subtitle">Premium interior design that reflects your unique style. Crafted with precision, delivered with passion.</p>
             
             <div className="hero-features-cards">
               <div className="feature-card">
-                <div className="feature-icon">✓</div>
+                <div className="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="feature-text">
                   <strong>45 Days</strong>
                   <span>Delivery</span>
                 </div>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">✓</div>
+                <div className="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="feature-text">
                   <strong>10 Year</strong>
                   <span>Warranty</span>
                 </div>
               </div>
               <div className="feature-card">
-                <div className="feature-icon">✓</div>
+                <div className="feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M16.6667 5L7.5 14.1667L3.33333 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <div className="feature-text">
                   <strong>Free</strong>
                   <span>Design Consultation</span>
@@ -380,11 +396,6 @@ const Home = () => {
             </form>
           </div>
         </div>
-        
-        <div 
-          className="hero-background"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        ></div>
       </section>
 
       <section className="section brand-section">
