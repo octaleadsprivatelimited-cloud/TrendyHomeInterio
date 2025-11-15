@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 import './Footer.scss';
 
 const Footer = () => {
@@ -44,7 +45,7 @@ const Footer = () => {
         <div className="footer-main">
           <div className="footer-column company-column">
             <div className="footer-logo">
-              <h3>TrendyHomeInterio</h3>
+              <img src={logo} alt="TrendyHomeInterio" className="footer-logo-image" />
               <p className="company-tagline">Transforming spaces into beautiful homes</p>
             </div>
             <div className="contact-info">
@@ -62,16 +63,10 @@ const Footer = () => {
                     <path d="M17.5 14.1667V16.6667C17.5 17.1269 17.1269 17.5 16.6667 17.5H3.33333C2.8731 17.5 2.5 17.1269 2.5 16.6667V14.1667M17.5 14.1667L10 8.33333L2.5 14.1667M17.5 14.1667V3.33333C17.5 2.8731 17.1269 2.5 16.6667 2.5H3.33333C2.8731 2.5 2.5 2.8731 2.5 3.33333V14.1667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <a href="tel:18001024663">1800-102-4663</a>
-              </div>
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M10 1.66667C6.31833 1.66667 3.33333 4.65167 3.33333 8.33333C3.33333 12.9167 10 18.3333 10 18.3333C10 18.3333 16.6667 12.9167 16.6667 8.33333C16.6667 4.65167 13.6817 1.66667 10 1.66667Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="10" cy="8.33333" r="2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div>
+                  <a href="tel:+919959921803">+91 99599 21803</a>
+                  <a href="https://wa.me/919959921803" target="_blank" rel="noopener noreferrer" style={{marginLeft: '12px'}}>WhatsApp</a>
                 </div>
-                <span>Mumbai, Maharashtra 400001</span>
               </div>
             </div>
             <div className="social-links">
@@ -108,7 +103,6 @@ const Footer = () => {
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/estimate">Get Estimate</Link></li>
-              <li><Link to="/careers">Join Us</Link></li>
               <li><Link to="/design-gallery">Design Gallery</Link></li>
             </ul>
           </div>
@@ -135,21 +129,16 @@ const Footer = () => {
               <li><Link to="/business-interiors">Business Interiors</Link></li>
             </ul>
           </div>
-        </div>
 
-        {/* Footer Bottom */}
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p className="footer-copyright">
-              © {new Date().getFullYear()} TrendyHomeInterio. All rights reserved.
-            </p>
-            <div className="footer-badges">
-              <span className="badge">10 Year Warranty</span>
-              <span className="badge">45 Days Delivery</span>
-              <span className="badge">50K+ Happy Customers</span>
-            </div>
+          <div className="footer-column">
+            <h3>Locations We Serve</h3>
+            <ul>
+              <li>Andhra Pradesh (AP)</li>
+              <li>Telangana (TG)</li>
+            </ul>
           </div>
         </div>
+
       </div>
     </footer>
   );

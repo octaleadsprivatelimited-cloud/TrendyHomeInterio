@@ -28,22 +28,12 @@ const Contact = () => {
     {
       icon: (
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M16 4C12.134 4 9 7.134 9 11C9 17 16 28 16 28C16 28 23 17 23 11C23 7.134 19.866 4 16 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="16" cy="11" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
-      title: 'Address',
-      content: '123 Design Street, Mumbai, Maharashtra 400001'
-    },
-    {
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
           <path d="M22 4H10C8.89543 4 8 4.89543 8 6V26C8 27.1046 8.89543 28 10 28H22C23.1046 28 24 27.1046 24 26V6C24 4.89543 23.1046 4 22 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M16 22V22.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       ),
       title: 'Phone',
-      content: '+91 1800-102-4663, +91 91778 87049'
+      content: '+91 99599 21803'
     },
     {
       icon: (
@@ -90,6 +80,7 @@ const Contact = () => {
                             {phone.trim()}
                           </a>
                         ))}
+                        <a href="https://wa.me/919959921803" target="_blank" rel="noopener noreferrer" className="card-link">WhatsApp</a>
                       </div>
                     ) : (
                       <p>{card.content}</p>
@@ -205,7 +196,6 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="info-content">
-                      <p>123 Design Street, Mumbai, Maharashtra 400001</p>
                       <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="map-link">
                         View on Google Maps
                       </a>
@@ -238,8 +228,8 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="info-content">
-                      <a href="tel:18001024663" className="info-link">+91 1800-102-4663</a>
-                      <a href="tel:9177887049" className="info-link">+91 91778 87049</a>
+                      <a href="tel:+919959921803" className="info-link">+91 99599 21803</a>
+                      <a href="https://wa.me/919959921803" target="_blank" rel="noopener noreferrer" className="info-link">WhatsApp</a>
                     </div>
                   </div>
                 </div>

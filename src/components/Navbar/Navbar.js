@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -25,12 +26,19 @@ const Navbar = () => {
       <div className="top-bar">
         <div className="top-bar-container">
           <div className="top-bar-left">
-            <a href="tel:18001024663" className="top-bar-contact">
+            <a href="tel:+919959921803" className="top-bar-contact">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 2.5C2.5 1.94772 2.94772 1.5 3.5 1.5H4.5C5.05228 1.5 5.5 1.94772 5.5 2.5V3.5M2.5 9.5C2.5 10.0523 2.94772 10.5 3.5 10.5H4.5C5.05228 10.5 5.5 10.0523 5.5 9.5V8.5M9.5 1.5H8.5C7.94772 1.5 7.5 1.94772 7.5 2.5V3.5M9.5 10.5H8.5C7.94772 10.5 7.5 10.0523 7.5 9.5V8.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M5.5 6H6.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
               </svg>
-              <span>1800-102-4663</span>
+              <span>+91 99599 21803</span>
+            </a>
+            <a href="https://wa.me/919959921803" target="_blank" rel="noopener noreferrer" className="top-bar-contact">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1C3.23858 1 1 3.23858 1 6C1 7.5 1.5 8.8 2.3 9.8L1 11L2.2 9.7C3.2 10.5 4.5 11 6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M4 6L5.5 7.5L8 5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span>WhatsApp</span>
             </a>
             <a href="mailto:hello@trendyhomeinterio.com" className="top-bar-contact">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,18 +46,6 @@ const Navbar = () => {
               </svg>
               <span>hello@trendyhomeinterio.com</span>
             </a>
-            <span className="top-bar-address">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 1C4.34315 1 3 2.34315 3 4C3 6.5 6 11 6 11C6 11 9 6.5 9 4C9 2.34315 7.65685 1 6 1Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="6" cy="4" r="1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span>Mumbai, Maharashtra</span>
-            </span>
-          </div>
-          <div className="top-bar-right">
-            <Link to="/partner">Partner with Us</Link>
-            <Link to="/refer">Refer and Earn</Link>
-            <Link to="/careers">Join Us</Link>
           </div>
         </div>
       </div>
@@ -58,7 +54,7 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="navbar-logo">
-            <span className="logo-text">TrendyHomeInterio</span>
+            <img src={logo} alt="TrendyHomeInterio" className="logo-image" />
           </Link>
           
           <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>

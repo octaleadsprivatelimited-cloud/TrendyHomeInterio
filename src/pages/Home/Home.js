@@ -367,9 +367,9 @@ const Home = () => {
               </div>
               
               <button type="submit" className="btn-primary-sm submit-button">
-                <span className="cta-label">Book 3D Design Session</span>
+                <span className="cta-label">Send</span>
                 <span className="free-badge">FREE</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
                   <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>

@@ -113,13 +113,15 @@
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 0.5px solid rgba(139, 160, 106, 0.3);
-  height: 44px;
+  height: 64px;
+  padding: 0.125rem 0;
 
   @media (max-width: 968px) {
     top: 0;
     position: fixed;
     border-bottom: 0.5px solid rgba(139, 160, 106, 0.3);
-    height: 44px;
+    height: 64px;
+    padding: 0.125rem 0;
   }
 
   &.scrolled {
@@ -151,9 +153,17 @@
     transition: opacity 0.2s ease;
     flex-shrink: 0;
     letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
 
     &:hover {
       opacity: 0.8;
+    }
+
+    .logo-image {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
     }
 
     .logo-text {

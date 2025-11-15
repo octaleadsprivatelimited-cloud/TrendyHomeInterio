@@ -62,7 +62,7 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
   .hero-section {
     position: relative;
     min-height: auto;
-    margin-top: 76px;
+    margin-top: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
 
     @media (max-width: 968px) {
       min-height: auto;
-      margin-top: 44px;
+      margin-top: 64px;
       padding: 2rem 1rem;
     }
 
@@ -315,7 +315,10 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       }
 
       .designer-form {
+        text-align: center;
+        
         .form-group {
+          text-align: left;
           margin-bottom: 1.25rem;
 
           label {
@@ -392,31 +395,33 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
         }
 
         .submit-button {
-          width: 100%;
-          display: flex;
+          width: auto;
+          display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 0.65rem;
-          margin-bottom: 1.1rem;
-          font-size: 1rem;
+          gap: 0.5rem;
+          margin: 0 auto 1.1rem auto;
+          font-size: 0.875rem;
+          padding: 0.65rem 1.25rem;
 
           .cta-label {
-            flex: 1;
             text-align: center;
             font-weight: 600;
           }
 
           .free-badge {
-            padding: 0.25rem 0.65rem;
+            padding: 0.2rem 0.5rem;
             background: rgba(255, 255, 255, 0.3);
             border-radius: 6px;
-            font-size: 0.78rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #1d1d1f;
           }
 
           svg {
             flex-shrink: 0;
+            width: 16px;
+            height: 16px;
             transition: transform 0.2s ease;
           }
 

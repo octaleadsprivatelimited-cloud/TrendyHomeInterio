@@ -150,13 +150,13 @@ $border: #d2d2d7;
 
   .footer-main {
     display: grid;
-    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
     gap: 4rem;
     padding: 3.5rem 0;
     border-bottom: 1px solid $border;
 
     @media (max-width: 1024px) {
-      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 3rem;
     }
 
@@ -175,6 +175,13 @@ $border: #d2d2d7;
       &.company-column {
         .footer-logo {
           margin-bottom: 1.5rem;
+
+          .footer-logo-image {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+          }
 
           h3 {
             font-size: 1.5rem;
@@ -296,6 +303,11 @@ $border: #d2d2d7;
         gap: 0.625rem;
 
         li {
+          color: $text-light;
+          font-size: 0.875rem;
+          line-height: 1.47059;
+          letter-spacing: -0.01em;
+
           a {
             color: $text-light;
             text-decoration: none;
