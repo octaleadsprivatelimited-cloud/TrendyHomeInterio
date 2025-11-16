@@ -111,11 +111,12 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
     .hero-container {
       position: relative;
       z-index: 10;
-      max-width: 900px;
+      max-width: 800px;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding-left: 0;
 
       @media (max-width: 768px) {
         display: flex !important;
@@ -132,13 +133,14 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       color: #ffffff;
       position: relative;
       z-index: 3;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(15px);
-      padding: 2rem 1.75rem;
-      border-radius: 18px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-      max-width: 700px;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+      padding: 1.5rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.38);
+      max-width: 560px;
       width: 100%;
+      text-align: left;
 
       @media (max-width: 768px) {
         position: relative !important;
@@ -201,11 +203,11 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       }
 
       .hero-title {
-        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-size: clamp(1.75rem, 4.5vw, 3rem);
         font-weight: 700;
         line-height: 1.1;
         letter-spacing: -0.05em;
-        margin: 0 0 1.25rem 0;
+        margin: 0 0 1rem 0;
         color: #ffffff;
         font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
 
@@ -301,13 +303,13 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       }
 
       .hero-subtitle {
-        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-size: clamp(0.9375rem, 1.8vw, 1.125rem);
         font-weight: 400;
-        margin: 0 0 2rem 0;
+        margin: 0 0 1.25rem 0;
         color: rgba(255, 255, 255, 0.95);
         line-height: 1.6;
         letter-spacing: -0.01em;
-        max-width: 550px;
+        max-width: 520px;
         animation: fadeInUp 0.8s ease-out 0.4s both;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 
@@ -319,7 +321,7 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
       .hero-features-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.75rem;
         animation: fadeInUp 0.8s ease-out 0.6s both;
 
         @media (max-width: 768px) {
@@ -329,12 +331,12 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
         .feature-card {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          padding: 0.875rem 1.25rem;
+          gap: 0.6rem;
+          padding: 0.75rem 1rem;
           background: rgba(255, 255, 255, 0.1);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 14px;
+          border-radius: 12px;
           transition: all 0.3s ease;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
@@ -356,8 +358,8 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
           }
 
           .feature-icon {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -365,8 +367,8 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
             flex-shrink: 0;
             
             svg {
-              width: 18px;
-              height: 18px;
+              width: 16px;
+              height: 16px;
               filter: drop-shadow(0 0 8px rgba(255, 140, 66, 0.5));
             }
           }
@@ -377,7 +379,7 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
             gap: 0.25rem;
 
             strong {
-              font-size: 0.9375rem;
+              font-size: 0.875rem;
               font-weight: 600;
               color: #ffffff;
               letter-spacing: -0.01em;
@@ -391,7 +393,7 @@ $gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.
             }
 
             span {
-              font-size: 0.8125rem;
+              font-size: 0.75rem;
               color: rgba(255, 255, 255, 0.9);
               text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 
