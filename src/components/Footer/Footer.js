@@ -126,6 +126,11 @@ const Footer = () => {
               <li><Link to="/contact">Contact Us</Link></li>
               <li><Link to="/estimate">Get Estimate</Link></li>
               <li><Link to="/design-gallery">Design Gallery</Link></li>
+              <li>
+                <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">
+                  Sitemap
+                </a>
+              </li>
             </ul>
           </div>
 
