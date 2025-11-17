@@ -19,6 +19,7 @@ import CustomerStories from './pages/CustomerStories/CustomerStories';
 import BusinessInteriors from './pages/BusinessInteriors/BusinessInteriors';
 import DesignGallery from './pages/DesignGallery/DesignGallery';
 import Estimate from './pages/Estimate/Estimate';
+import Sitemap from './pages/Sitemap/Sitemap';
 import { ScrollToTop } from './utils/scrollToTop';
 import './App.scss';
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/interiors-by-trendyhomeinterio" element={<Home />} />
           <Route path="/design-journal" element={<Home />} />
           <Route path="/design-library" element={<Home />} />
+          <Route path="/sitemap" element={<Sitemap />} />
         </Routes>
         <WhatsAppButton />
         <Footer />
